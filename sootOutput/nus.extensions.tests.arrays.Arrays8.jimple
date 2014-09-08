@@ -1,0 +1,51 @@
+public class nus.extensions.tests.arrays.Arrays8 extends nus.extensions.tests.MainActivity
+{
+
+    public void <init>()
+    {
+        nus.extensions.tests.arrays.Arrays8 r0;
+
+        r0 := @this: nus.extensions.tests.arrays.Arrays8;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    public void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.arrays.Arrays8 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.lang.String r3, $r6, $r7;
+        java.lang.String[] r4, $r5;
+
+        r0 := @this: nus.extensions.tests.arrays.Arrays8;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        $r5 = newarray (java.lang.String)[2];
+        $r5[0] = r3;
+        $r5[1] = "abc";
+        r4 = $r5;
+        $r6 = r4[0];
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r6);
+        $r7 = r4[1];
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r7);
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.arrays.Arrays8 r0;
+
+        r0 := @this: nus.extensions.tests.arrays.Arrays8;
+        return "test of array initializers";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.arrays.Arrays8 r0;
+
+        r0 := @this: nus.extensions.tests.arrays.Arrays8;
+        return 1;
+    }
+}

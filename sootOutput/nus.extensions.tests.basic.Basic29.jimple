@@ -1,0 +1,58 @@
+public class nus.extensions.tests.basic.Basic29 extends nus.extensions.tests.MainActivity
+{
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic29 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic29;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    public void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic29 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.lang.String r3, $r8, $r10, $r11;
+        nus.extensions.tests.basic.Basic29$Node r4, r5, $r6, $r7, $r9;
+
+        r0 := @this: nus.extensions.tests.basic.Basic29;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        $r6 = new nus.extensions.tests.basic.Basic29$Node;
+        specialinvoke $r6.<nus.extensions.tests.basic.Basic29$Node: void <init>(nus.extensions.tests.basic.Basic29)>(r0);
+        r4 = $r6;
+        $r7 = new nus.extensions.tests.basic.Basic29$Node;
+        specialinvoke $r7.<nus.extensions.tests.basic.Basic29$Node: void <init>(nus.extensions.tests.basic.Basic29)>(r0);
+        r5 = $r7;
+        r4.<nus.extensions.tests.basic.Basic29$Node: nus.extensions.tests.basic.Basic29$Node next> = r5;
+        r5.<nus.extensions.tests.basic.Basic29$Node: java.lang.String value> = r3;
+        $r8 = r5.<nus.extensions.tests.basic.Basic29$Node: java.lang.String value>;
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r8);
+        $r9 = r4.<nus.extensions.tests.basic.Basic29$Node: nus.extensions.tests.basic.Basic29$Node next>;
+        $r10 = $r9.<nus.extensions.tests.basic.Basic29$Node: java.lang.String value>;
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r10);
+        $r11 = r4.<nus.extensions.tests.basic.Basic29$Node: java.lang.String value>;
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r11);
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic29 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic29;
+        return "recursive data structures";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic29 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic29;
+        return 2;
+    }
+}

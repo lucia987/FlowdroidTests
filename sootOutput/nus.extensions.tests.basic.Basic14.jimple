@@ -1,0 +1,56 @@
+public class nus.extensions.tests.basic.Basic14 extends nus.extensions.tests.MainActivity
+{
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic14 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic14;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    public void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic14 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.util.Enumeration r3;
+        java.lang.String r4;
+        java.lang.Object $r5;
+        boolean $z0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic14;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.util.Enumeration getInitParameterNames()>();
+        goto label1;
+
+     label0:
+        $r5 = interfaceinvoke r3.<java.util.Enumeration: java.lang.Object nextElement()>();
+        r4 = (java.lang.String) $r5;
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>(r4);
+
+     label1:
+        $z0 = interfaceinvoke r3.<java.util.Enumeration: boolean hasMoreElements()>();
+        if $z0 != 0 goto label0;
+
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic14 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic14;
+        return "use the servlet context and casts";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic14 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic14;
+        return 1;
+    }
+}

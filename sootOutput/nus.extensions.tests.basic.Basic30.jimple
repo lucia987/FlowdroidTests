@@ -1,0 +1,52 @@
+public class nus.extensions.tests.basic.Basic30 extends nus.extensions.tests.MainActivity
+{
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic30 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic30;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    protected void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic30 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.lang.String r3, $r6, $r7;
+        nus.extensions.tests.basic.Basic30$Data r4, $r5;
+
+        r0 := @this: nus.extensions.tests.basic.Basic30;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        $r5 = new nus.extensions.tests.basic.Basic30$Data;
+        specialinvoke $r5.<nus.extensions.tests.basic.Basic30$Data: void <init>(nus.extensions.tests.basic.Basic30)>(r0);
+        r4 = $r5;
+        r4.<nus.extensions.tests.basic.Basic30$Data: java.lang.String value2> = r3;
+        r4.<nus.extensions.tests.basic.Basic30$Data: java.lang.String value1> = "abc";
+        $r6 = r4.<nus.extensions.tests.basic.Basic30$Data: java.lang.String value1>;
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r6);
+        $r7 = r4.<nus.extensions.tests.basic.Basic30$Data: java.lang.String value2>;
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r7);
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic30 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic30;
+        return "field sensitivity";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic30 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic30;
+        return 1;
+    }
+}

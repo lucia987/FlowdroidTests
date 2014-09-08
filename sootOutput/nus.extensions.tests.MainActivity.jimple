@@ -1,0 +1,49 @@
+public abstract class nus.extensions.tests.MainActivity extends android.app.Activity
+{
+    public static final java.lang.String CONNECTION_STRING;
+    nus.extensions.tests.SourceEmulator source;
+    nus.extensions.tests.SinkEmulator sink;
+
+    static void <clinit>()
+    {
+        <nus.extensions.tests.MainActivity: java.lang.String CONNECTION_STRING> = null;
+        return;
+    }
+
+    public void <init>()
+    {
+        nus.extensions.tests.MainActivity r0;
+
+        r0 := @this: nus.extensions.tests.MainActivity;
+        specialinvoke r0.<android.app.Activity: void <init>()>();
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        nus.extensions.tests.MainActivity r0;
+        android.os.Bundle r1;
+        android.widget.TextView r2;
+        android.view.View $r3;
+        nus.extensions.tests.SourceEmulator $r4;
+        nus.extensions.tests.SinkEmulator $r5;
+
+        r0 := @this: nus.extensions.tests.MainActivity;
+        r1 := @parameter0: android.os.Bundle;
+        specialinvoke r0.<android.app.Activity: void onCreate(android.os.Bundle)>(r1);
+        virtualinvoke r0.<nus.extensions.tests.MainActivity: void setContentView(int)>(2130903040);
+        $r3 = virtualinvoke r0.<nus.extensions.tests.MainActivity: android.view.View findViewById(int)>(2131165184);
+        r2 = (android.widget.TextView) $r3;
+        virtualinvoke r2.<android.widget.TextView: void setText(java.lang.CharSequence)>("Hello world!");
+        $r4 = r0.<nus.extensions.tests.MainActivity: nus.extensions.tests.SourceEmulator source>;
+        $r5 = r0.<nus.extensions.tests.MainActivity: nus.extensions.tests.SinkEmulator sink>;
+        virtualinvoke r0.<nus.extensions.tests.MainActivity: void main(nus.extensions.tests.SourceEmulator,nus.extensions.tests.SinkEmulator)>($r4, $r5);
+        return;
+    }
+
+    protected abstract void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator);
+
+    public abstract java.lang.String getDescription();
+
+    public abstract int getVulnerabilityCount();
+}

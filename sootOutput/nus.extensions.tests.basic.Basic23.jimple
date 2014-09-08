@@ -1,0 +1,65 @@
+public class nus.extensions.tests.basic.Basic23 extends nus.extensions.tests.MainActivity
+{
+    private static final java.lang.String FIELD_NAME;
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic23 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic23;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    public void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic23 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2, $r7;
+        java.lang.String r3, r4;
+        java.lang.Throwable r5, $r8;
+        java.util.Locale $r6;
+        java.io.PrintStream $r9;
+
+        r0 := @this: nus.extensions.tests.basic.Basic23;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        $r6 = <java.util.Locale: java.util.Locale UK>;
+        r4 = virtualinvoke r3.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r6);
+
+     label0:
+        $r7 = new nus.extensions.tests.SinkEmulator;
+        specialinvoke $r7.<nus.extensions.tests.SinkEmulator: void <init>(java.lang.String)>(r4);
+
+     label1:
+        goto label3;
+
+     label2:
+        $r8 := @caughtexception;
+        r5 = $r8;
+        $r9 = <java.lang.System: java.io.PrintStream err>;
+        virtualinvoke $r9.<java.io.PrintStream: void println(java.lang.String)>("An error occurred");
+
+     label3:
+        return;
+
+        catch java.lang.Throwable from label0 to label1 with label2;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic23 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic23;
+        return "path traversal";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic23 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic23;
+        return 3;
+    }
+}

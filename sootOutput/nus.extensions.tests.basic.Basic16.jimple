@@ -1,0 +1,50 @@
+public class nus.extensions.tests.basic.Basic16 extends nus.extensions.tests.MainActivity
+{
+    private static final java.lang.String FIELD_NAME;
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic16 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic16;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    public void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic16 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.lang.String r3, $r6;
+        nus.extensions.tests.basic.Basic16$Widget r4, $r5;
+
+        r0 := @this: nus.extensions.tests.basic.Basic16;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        $r5 = new nus.extensions.tests.basic.Basic16$Widget;
+        specialinvoke $r5.<nus.extensions.tests.basic.Basic16$Widget: void <init>(nus.extensions.tests.basic.Basic16)>(r0);
+        r4 = $r5;
+        virtualinvoke r4.<nus.extensions.tests.basic.Basic16$Widget: void setContents(java.lang.String)>(r3);
+        $r6 = virtualinvoke r4.<nus.extensions.tests.basic.Basic16$Widget: java.lang.String getContents()>();
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r6);
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic16 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic16;
+        return "simple heap-allocated data strucure";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic16 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic16;
+        return 1;
+    }
+}

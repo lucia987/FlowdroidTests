@@ -1,0 +1,19 @@
+class nus.extensions.tests.basic.Basic29$Node extends java.lang.Object
+{
+    java.lang.String value;
+    nus.extensions.tests.basic.Basic29$Node next;
+    final nus.extensions.tests.basic.Basic29 this$0;
+
+    void <init>(nus.extensions.tests.basic.Basic29)
+    {
+        nus.extensions.tests.basic.Basic29$Node r0;
+        nus.extensions.tests.basic.Basic29 r1;
+
+        r0 := @this: nus.extensions.tests.basic.Basic29$Node;
+        r1 := @parameter0: nus.extensions.tests.basic.Basic29;
+        r0.<nus.extensions.tests.basic.Basic29$Node: nus.extensions.tests.basic.Basic29 this$0> = r1;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        r0.<nus.extensions.tests.basic.Basic29$Node: nus.extensions.tests.basic.Basic29$Node next> = null;
+        return;
+    }
+}

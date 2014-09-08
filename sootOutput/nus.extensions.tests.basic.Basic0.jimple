@@ -1,0 +1,44 @@
+public class nus.extensions.tests.basic.Basic0 extends nus.extensions.tests.MainActivity
+{
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic0 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic0;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    protected void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic0 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.lang.String r3, r4;
+
+        r0 := @this: nus.extensions.tests.basic.Basic0;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        r4 = virtualinvoke r3.<java.lang.String: java.lang.String toString()>();
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>(r4);
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic0 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic0;
+        return "very simple XSS";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic0 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic0;
+        return 1;
+    }
+}

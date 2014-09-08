@@ -1,0 +1,18 @@
+class nus.extensions.tests.basic.Basic31$Data extends java.lang.Object
+{
+    java.lang.String value1;
+    java.lang.String value2;
+    final nus.extensions.tests.basic.Basic31 this$0;
+
+    void <init>(nus.extensions.tests.basic.Basic31)
+    {
+        nus.extensions.tests.basic.Basic31$Data r0;
+        nus.extensions.tests.basic.Basic31 r1;
+
+        r0 := @this: nus.extensions.tests.basic.Basic31$Data;
+        r1 := @parameter0: nus.extensions.tests.basic.Basic31;
+        r0.<nus.extensions.tests.basic.Basic31$Data: nus.extensions.tests.basic.Basic31 this$0> = r1;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

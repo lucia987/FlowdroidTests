@@ -1,0 +1,56 @@
+public class nus.extensions.tests.basic.Basic17 extends nus.extensions.tests.MainActivity
+{
+    private static final java.lang.String FIELD_NAME;
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic17 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic17;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    public void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic17 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.lang.String r3, $r8, $r9;
+        nus.extensions.tests.basic.Basic17$Widget r4, r5, $r6, $r7;
+
+        r0 := @this: nus.extensions.tests.basic.Basic17;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        $r6 = new nus.extensions.tests.basic.Basic17$Widget;
+        specialinvoke $r6.<nus.extensions.tests.basic.Basic17$Widget: void <init>(nus.extensions.tests.basic.Basic17)>(r0);
+        r4 = $r6;
+        virtualinvoke r4.<nus.extensions.tests.basic.Basic17$Widget: void setContents(java.lang.String)>(r3);
+        $r7 = new nus.extensions.tests.basic.Basic17$Widget;
+        specialinvoke $r7.<nus.extensions.tests.basic.Basic17$Widget: void <init>(nus.extensions.tests.basic.Basic17)>(r0);
+        r5 = $r7;
+        virtualinvoke r5.<nus.extensions.tests.basic.Basic17$Widget: void setContents(java.lang.String)>("abc");
+        $r8 = virtualinvoke r4.<nus.extensions.tests.basic.Basic17$Widget: java.lang.String getContents()>();
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r8);
+        $r9 = virtualinvoke r5.<nus.extensions.tests.basic.Basic17$Widget: java.lang.String getContents()>();
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r9);
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic17 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic17;
+        return "simple heap-allocated data strucure";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic17 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic17;
+        return 1;
+    }
+}

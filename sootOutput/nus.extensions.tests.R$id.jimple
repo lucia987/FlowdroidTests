@@ -1,0 +1,13 @@
+public final class nus.extensions.tests.R$id extends java.lang.Object
+{
+    public static final int answer_view;
+
+    public void <init>()
+    {
+        nus.extensions.tests.R$id r0;
+
+        r0 := @this: nus.extensions.tests.R$id;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

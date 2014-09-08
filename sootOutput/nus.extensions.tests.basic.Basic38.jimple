@@ -1,0 +1,67 @@
+public class nus.extensions.tests.basic.Basic38 extends nus.extensions.tests.MainActivity
+{
+    private static final java.lang.String FIELD_NAME;
+
+    public void <init>()
+    {
+        nus.extensions.tests.basic.Basic38 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic38;
+        specialinvoke r0.<nus.extensions.tests.MainActivity: void <init>()>();
+        return;
+    }
+
+    public void main(nus.extensions.tests.SourceEmulator, nus.extensions.tests.SinkEmulator)
+    {
+        nus.extensions.tests.basic.Basic38 r0;
+        nus.extensions.tests.SourceEmulator r1;
+        nus.extensions.tests.SinkEmulator r2;
+        java.lang.String r3, $r8, $r9;
+        java.util.StringTokenizer r4, r5, $r6, $r7;
+        boolean $z0, $z1;
+
+        r0 := @this: nus.extensions.tests.basic.Basic38;
+        r1 := @parameter0: nus.extensions.tests.SourceEmulator;
+        r2 := @parameter1: nus.extensions.tests.SinkEmulator;
+        r3 = virtualinvoke r1.<nus.extensions.tests.SourceEmulator: java.lang.String getParameter(java.lang.String)>("name");
+        $r6 = new java.util.StringTokenizer;
+        specialinvoke $r6.<java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>(r3, "\t");
+        r4 = $r6;
+        $r7 = new java.util.StringTokenizer;
+        specialinvoke $r7.<java.util.StringTokenizer: void <init>(java.lang.String,java.lang.String)>("abc\tdef", "\t");
+        r5 = $r7;
+        goto label1;
+
+     label0:
+        $r8 = virtualinvoke r4.<java.util.StringTokenizer: java.lang.String nextToken()>();
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r8);
+        $r9 = virtualinvoke r5.<java.util.StringTokenizer: java.lang.String nextToken()>();
+        virtualinvoke r2.<nus.extensions.tests.SinkEmulator: void println(java.lang.String)>($r9);
+
+     label1:
+        $z0 = virtualinvoke r4.<java.util.StringTokenizer: boolean hasMoreTokens()>();
+        if $z0 == 0 goto label2;
+
+        $z1 = virtualinvoke r5.<java.util.StringTokenizer: boolean hasMoreElements()>();
+        if $z1 != 0 goto label0;
+
+     label2:
+        return;
+    }
+
+    public java.lang.String getDescription()
+    {
+        nus.extensions.tests.basic.Basic38 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic38;
+        return "StringTokenizer test with a false positive";
+    }
+
+    public int getVulnerabilityCount()
+    {
+        nus.extensions.tests.basic.Basic38 r0;
+
+        r0 := @this: nus.extensions.tests.basic.Basic38;
+        return 1;
+    }
+}
