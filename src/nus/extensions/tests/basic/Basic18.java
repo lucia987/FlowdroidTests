@@ -5,6 +5,8 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
+
 import nus.extensions.tests.MainActivity;
 import nus.extensions.tests.SinkEmulator;
 import nus.extensions.tests.SourceEmulator;
@@ -17,8 +19,10 @@ public class Basic18 extends MainActivity {
         String s = source.getParameter(FIELD_NAME);
 
         for(int i = 0; i < 100; i++) {
-            if(i > 5 && (i % 17 == 0)) {
-                sink.println(s);                    /* BAD */
+
+            PrintWriter writer = sink.getWriter();
+        	if(i > 5 && (i % 17 == 0)) {
+                writer.println(s);                    /* BAD */
             }
         }
     }

@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.collections;
 
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 import nus.extensions.tests.MainActivity;
@@ -29,8 +30,9 @@ public class Collections2 extends MainActivity {
         String s2 = (String) ll1.getLast();
         String s3 = (String) ll2.getLast();
         
-        sink.println(s2);                    /* BAD */
-        sink.println(s3);                    /* OK */
+        PrintWriter writer = sink.getWriter();
+        writer.println(s2);                    /* BAD */
+        writer.println(s3);                    /* OK */
     }
     
     public String getDescription() {

@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
 import java.util.Locale;
 
 import nus.extensions.tests.MainActivity;
@@ -22,8 +23,10 @@ public class Basic25 extends MainActivity {
 	{
        String[] s = source.getParameterValues(FIELD_NAME);
        String name = s[0].toLowerCase(Locale.UK);
+
+       PrintWriter writer = sink.getWriter();
        
-       sink.println(name);                    /* BAD */
+       writer.println(name);                    /* BAD */
     }
     
     public String getDescription() {

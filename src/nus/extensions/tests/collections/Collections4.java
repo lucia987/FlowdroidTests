@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.collections;
 
+import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -25,9 +26,10 @@ public class Collections4 extends MainActivity {
         ll.addLast(name);
         
         for(Iterator iter = ll.iterator(); iter.hasNext();) {
+        	PrintWriter writer = sink.getWriter();
             Object o = iter.next();
             
-            sink.println(o);                    /* BAD */
+            writer.println(o);                    /* BAD */
         }
     }
     

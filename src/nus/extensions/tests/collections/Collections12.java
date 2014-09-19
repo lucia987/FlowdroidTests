@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.collections;
 
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 import nus.extensions.tests.MainActivity;
@@ -20,11 +21,16 @@ public class Collections12 extends MainActivity {
 
     protected void main(SourceEmulator source, SinkEmulator sink) {
     	String s1 = source.getParameter(FIELD_NAME);
-        LinkedList c1 = new LinkedList();
+
+        //writer.println(s1);
+    	
+    	LinkedList c1 = new LinkedList();
         c1.addLast(s1);
+        //writer.println(c1);
         Object[] array = c1.toArray();
         
-      	sink.println(array[0]);                    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        writer.println(array[0]);                    /* BAD */
     }
     
     public String getDescription() {

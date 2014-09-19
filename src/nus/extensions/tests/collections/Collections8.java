@@ -29,7 +29,8 @@ public class Collections8 extends MainActivity {
         c2.addAll(c1);
         String s2 = (String) c2.get(0); 
         
-        sink.println(s2);                    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        writer.println(s2);                    /* BAD */
     }
     
     public String getDescription() {

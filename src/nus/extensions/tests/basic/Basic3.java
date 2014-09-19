@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,12 +18,14 @@ public class Basic3 extends MainActivity {
 	public void main(SourceEmulator source, SinkEmulator sink)
 	{
         String str = source.getParameter("name");
+        PrintWriter writer = sink.getWriter();
         String s2 = str.toLowerCase();
 
 //        Map<String, String> map = new HashMap<String, String>();
 //        String s2 = map.get(str);
+
         
-        sink.println(s2);    /* BAD */
+        writer.println(s2);    /* BAD */
     }
     
     public String getDescription() {

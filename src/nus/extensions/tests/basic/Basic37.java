@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
 import nus.extensions.tests.MainActivity;
@@ -19,7 +20,8 @@ public class Basic37 extends MainActivity {
         String name = source.getParameter(FIELD_NAME);
         StringTokenizer tok = new StringTokenizer(name, "\t");
         while(tok.hasMoreTokens()) {
-            sink.println(tok.nextToken());              /* BAD */    
+        	PrintWriter writer = sink.getWriter();
+        	writer.println(tok.nextToken());              /* BAD */    
         }
     }
 

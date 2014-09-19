@@ -5,6 +5,8 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
+
 import nus.extensions.tests.MainActivity;
 import nus.extensions.tests.SinkEmulator;
 import nus.extensions.tests.SourceEmulator;
@@ -29,7 +31,9 @@ public class Basic16 extends MainActivity {
         Widget w = new Widget();
         w.setContents(s);
         
-        sink.println(w.getContents());                    /* BAD */
+
+        PrintWriter writer = sink.getWriter();
+        writer.println(w.getContents());                    /* BAD */
     }
     
     public String getDescription() {

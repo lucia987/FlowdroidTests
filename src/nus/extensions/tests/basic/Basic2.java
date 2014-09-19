@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
 import java.util.Random;
 
 import nus.extensions.tests.MainActivity;
@@ -22,9 +23,11 @@ public class Basic2 extends MainActivity {
         String str = source.getParameter("name");
         Random r = new Random();
         boolean choice = r.nextBoolean();
+
+        PrintWriter writer = sink.getWriter();
         
         if(choice) {        
-            sink.println(str);    /* BAD */
+            writer.println(str);    /* BAD */
         }
     }
 

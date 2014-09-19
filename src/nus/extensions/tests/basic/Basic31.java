@@ -19,24 +19,24 @@ public class Basic31 extends MainActivity {
     }
     
     protected void main(SourceEmulator source, SinkEmulator sink) {
-        /*
-    	Cookie[] cookies = source.getCookies();
         
-        String name     = cookies[0].getName();
-        String value    = cookies[0].getValue();
-        String comment  = cookies[0].getComment();
+    	//Cookie[] cookies = source.getCookies();
         
+        String name     = source.getName();
+        String value    = source.getValue();
+        String comment  = source.getComment();
+        
+        PrintWriter writer = sink.getWriter();
         
         if(name != null) {
-            sink.println(name);                      // BAD 
+            writer.println(name);                      // BAD 
         }
         if(value != null) {
-            sink.println(value);                     // BAD 
+        	writer.println(value);                     // BAD 
         }
         if(comment != null) {
-            sink.println(comment);                   // BAD 
+        	writer.println(comment);                   // BAD 
         }
-        */
     }
 
     public String getDescription() {

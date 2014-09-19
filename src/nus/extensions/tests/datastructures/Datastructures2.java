@@ -36,8 +36,9 @@ public class Datastructures2 extends MainActivity {
        String str1 = c1.getData();
        String str2 = c2.getData();
        
-       sink.println(str1);                              /* OK */
-       sink.println(str2);                              /* BAD */
+       PrintWriter writer = sink.getWriter();
+       writer.println(str1);                              /* OK */
+       writer.println(str2);                              /* BAD */
     }
     
     public String getDescription() {

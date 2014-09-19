@@ -5,6 +5,8 @@
  */
 package nus.extensions.tests.arrays;
 
+import java.io.PrintWriter;
+
 import nus.extensions.tests.*;
 
 public class Arrays10 extends MainActivity {
@@ -14,8 +16,10 @@ public class Arrays10 extends MainActivity {
         String[][] array = new String[3][5];
         array[0] = new String[] {name, "abc"};
         
-        sink.println(array[0][0]);         /* BAD */
-        sink.println(array[0][2]);         /* OK */
+        PrintWriter writer = sink.getWriter();
+        
+        writer.println(array[0][0]);         /* BAD */
+        writer.println(array[0][2]);         /* OK */
     }
     
     public String getDescription() {

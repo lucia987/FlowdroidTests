@@ -1,7 +1,7 @@
 /**
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
-    $Id: Basic1.java,v 1.4 2006/04/04 20:00:40 livshits Exp $
+    $Id: Basic13.java,v 1.5 2006/04/04 20:00:40 livshits Exp $
  */
 package nus.extensions.tests.basic;
 
@@ -13,22 +13,20 @@ import nus.extensions.tests.SinkEmulator;
 import nus.extensions.tests.SourceEmulator;
 
 /** 
- *  @servlet description="very simple XSS" 
+ *  @servlet description="use getInitParameter instead" 
  *  @servlet vuln_count = "1" 
  *  */
-public class Basic1 extends MainActivity {
-    public void main(SourceEmulator source, SinkEmulator sink)
-    {
-        String str = source.getParameter("name");
-        PrintWriter writer = sink.getWriter();
-        
-        writer.println(str);    /* BAD */
+public class Basic13 extends MainActivity {
+    protected void main(SourceEmulator req, SinkEmulator resp) {        
+        String s = req.getInitParameter("name");
+        PrintWriter writer = resp.getWriter();
+        writer.println(s);           /* BAD */
     }
     
     public String getDescription() {
-        return "very simple XSS";
+        return "use getInitParameterInstead";
     }
-
+    
     public int getVulnerabilityCount() {
         return 1;
     }

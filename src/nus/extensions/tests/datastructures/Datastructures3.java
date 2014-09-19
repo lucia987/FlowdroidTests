@@ -5,6 +5,8 @@
  */
 package nus.extensions.tests.datastructures;
 
+import java.io.PrintWriter;
+
 import nus.extensions.tests.MainActivity;
 import nus.extensions.tests.SinkEmulator;
 import nus.extensions.tests.SourceEmulator;
@@ -36,7 +38,8 @@ public class Datastructures3 extends MainActivity {
        
        String str = c1.next.str;
        
-       sink.println(str);                              /* BAD */
+       PrintWriter writer = sink.getWriter();
+       writer.println(str);                              /* BAD */
     }
     
     public String getDescription() {

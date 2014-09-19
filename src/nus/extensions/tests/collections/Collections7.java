@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.collections;
 
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -21,13 +22,14 @@ import nus.extensions.tests.SourceEmulator;
 public class Collections7 extends MainActivity {
     private static final String FIELD_NAME = "name";
 
-    protected void main(SourceEmulator source, SinkEmulator writer) {
+    protected void main(SourceEmulator source, SinkEmulator sink) {
         String name = source.getParameter(FIELD_NAME);
         Map m = new HashMap();
         m.put("a", name);
         for(Iterator iter = m.entrySet().iterator(); iter.hasNext();) {
             Map.Entry e = (Entry) iter.next();
             
+            PrintWriter writer = sink.getWriter();
             writer.println(e.getKey());                         /* OK */
             writer.println(e.getValue());                       /* BAD */
         }

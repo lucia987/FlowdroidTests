@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
 import java.util.Enumeration;
 
 import nus.extensions.tests.MainActivity;
@@ -21,7 +22,9 @@ public class Basic14 extends MainActivity {
 	{
         for(Enumeration e = source.getInitParameterNames(); e.hasMoreElements(); ) {
             String s  = (String) e.nextElement();
-            sink.println(s);                      /* BAD */
+
+            PrintWriter writer = sink.getWriter();
+            writer.println(s);                      /* BAD */
         }           
     }
     

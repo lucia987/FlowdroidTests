@@ -9,6 +9,9 @@ import javax.servlet.http.Cookie;
 public class SourceEmulator
 {
 	public SourceEmulator() {}
+	public SourceEmulator(SourceEmulator req) {
+		// TODO Auto-generated constructor stub
+	}
 	/*
 	 "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>",
 	 "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>",
@@ -18,8 +21,8 @@ public class SourceEmulator
 	public String getParameter(String src) { return src;}
 
 
-	//"<javax.servlet.ServletConfig: java.util.Enumeration getInitParameterNames()>",
-	public Enumeration getInitParameterNames() { return null;}
+	//"<javax.servlet.ServletConfig: java.util.Enumeration Names()>",
+	public Enumeration Names() { return null;}
 	
 	//"<javax.servlet.ServletRequest: java.lang.String[] getParameterValues(java.lang.String)>",
 	//"<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>",
@@ -47,7 +50,7 @@ public class SourceEmulator
 	public String getRemoteUser() { return null;}
 	//"<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>",	
 	public String getRequestURL() { return null;}
-	
+	*/
 	//"<javax.servlet.ServletConfig: java.lang.String getInitParameter(java.lang.String)>",
 	//"<javax.servlet.ServletContext: java.lang.String getInitParameter(java.lang.String)>",
 	//"<soot.jimple.infoflow.test.securibench.supportClasses.DummyServletConfig: java.lang.String getInitParameter(java.lang.String)>",
@@ -56,7 +59,25 @@ public class SourceEmulator
 		return new String("initParameter("+src+")");
 	}
 	
+	//	"<javax.servlet.ServletConfig: java.util.Enumeration getInitParameterNames()>",
+	public Enumeration getInitParameterNames()
+	{
+		return null;
+	}
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String getComment() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
+	/*
 	//"<javax.servlet.http.HttpServletRequest: javax.servlet.http.Cookie[] getCookies()>",
 	public Cookie[] getCookies() { return null;}
 	//"<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>",

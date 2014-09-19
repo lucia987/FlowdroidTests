@@ -31,15 +31,18 @@ public class Datastructures6 extends MainActivity {
        String name = source.getParameter(FIELD_NAME);
        C c = new C();
        C head = c;
+    
        for(int i = 0; i < 1600; i++){
     	   C next = new C();    	   
     	   c.setNext(next);
     	   c = next;
        }
+       
        c.setData(name);
        c = head;
        while(c != null) {
-           sink.println(c.getData());                              /* BAD */
+    	   PrintWriter writer = sink.getWriter();
+           writer.println(c.getData());                              /* BAD */
            
     	   c = c.next;
        }

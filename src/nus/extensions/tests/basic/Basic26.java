@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -22,7 +23,9 @@ public class Basic26 extends MainActivity {
        for(Iterator iter = m.entrySet().iterator(); iter.hasNext();) {
            Map.Entry e = (Entry) iter.next();
            if(e.getKey().equals(FIELD_NAME)) {
-               sink.println(e.getValue());        
+
+               PrintWriter writer = sink.getWriter();
+               writer.println(e.getValue());        
            }           
        }
     }

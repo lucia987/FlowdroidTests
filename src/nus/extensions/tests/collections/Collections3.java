@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.collections;
 
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 import nus.extensions.tests.MainActivity;
@@ -28,9 +29,10 @@ public class Collections3 extends MainActivity {
         LinkedList c = (LinkedList) ll2.getLast();
         String s2 = (String) c.getLast(); 
         
-        sink.println(s2);                    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        writer.println(s2);                    /* BAD */
         // this is because the print out of c includes the test of s1
-        sink.println(c);                     /* BAD */     
+        writer.println(c);                     /* BAD */     
     }
     
     public String getDescription() {

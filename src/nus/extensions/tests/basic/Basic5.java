@@ -22,9 +22,11 @@ public class Basic5 extends MainActivity {
         String s4 = s3.replace(';', '.');
         String s5 = s4.trim();
         
-        sink.println(s3);    /* BAD */
-        sink.println(s4);    /* BAD */
-        sink.println(s5);    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        
+        writer.println(s3);    /* BAD */
+        writer.println(s4);    /* BAD */
+        writer.println(s5);    /* BAD */
     }
     
     public String getDescription() {

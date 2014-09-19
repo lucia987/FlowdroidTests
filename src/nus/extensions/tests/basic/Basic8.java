@@ -5,6 +5,7 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
 import java.util.BitSet;
 
 import nus.extensions.tests.MainActivity;
@@ -26,7 +27,8 @@ public class Basic8 extends MainActivity {
                             
                         }
                     } else {
-                        sink.println(str);    /* BAD */
+                    	PrintWriter writer = sink.getWriter();
+                        writer.println(str);    /* BAD */
                     }
                 }
             }

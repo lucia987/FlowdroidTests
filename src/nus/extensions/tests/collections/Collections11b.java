@@ -6,6 +6,7 @@
 package nus.extensions.tests.collections;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Collection;
 
 import nus.extensions.tests.SinkEmulator;
@@ -18,6 +19,7 @@ class Collections11b {
     protected void foo(Object o, SinkEmulator sink) {
     	Collection c = (Collection) o;
         String str = c.toString();
-        sink.println(str);                    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        writer.println(str);                    /* BAD */
     }
 }

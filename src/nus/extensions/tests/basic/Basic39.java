@@ -25,7 +25,9 @@ public class Basic39 extends MainActivity {
         String name = source.getParameter(FIELD_NAME);
         StringTokenizer tok = new StringTokenizer(name, "\t");
         while(tok.hasMoreElements()) {
-            sink.println(tok.nextElement());              /* BAD */    
+         	PrintWriter writer = sink.getWriter();
+            
+        	writer.println(tok.nextElement());              /* BAD */    
         }
     }
 

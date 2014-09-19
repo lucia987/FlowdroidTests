@@ -18,14 +18,16 @@ public class Basic12 extends MainActivity {
 	{
         String s1 = source.getParameter("name");
         boolean choice = new Random().nextBoolean();
+
+        PrintWriter writer = sink.getWriter();
         
         if(choice) {
-            sink.println(s1 + ":");   /* BAD */
+            writer.println(s1 + ":");   /* BAD */
         } else{
-        	sink.println(s1 + ";");   /* BAD */
+        	writer.println(s1 + ";");   /* BAD */
         }
         
-        sink.println("\n");           /* OK */
+        writer.println("\n");           /* OK */
     }
     
     public String getDescription() {

@@ -5,6 +5,8 @@
  */
 package nus.extensions.tests.basic;
 
+import java.io.PrintWriter;
+
 import nus.extensions.tests.MainActivity;
 import nus.extensions.tests.SinkEmulator;
 import nus.extensions.tests.SourceEmulator;
@@ -20,10 +22,12 @@ public class Basic11 extends MainActivity {
         String s2 = "abc";
         String s3 = s1.toUpperCase();
         String s4 = s2.toUpperCase();
+
+        PrintWriter writer = sink.getWriter();
         
-        sink.println(s3);         /* BAD */
-        sink.println(s1 + ";");   /* BAD */
-        sink.println(s4);         /* OK */
+        writer.println(s3);         /* BAD */
+        writer.println(s1 + ";");   /* BAD */
+        writer.println(s4);         /* OK */
     }
     
     public String getDescription() {

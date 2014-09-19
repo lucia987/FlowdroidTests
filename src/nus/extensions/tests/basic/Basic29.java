@@ -25,10 +25,12 @@ public class Basic29 extends MainActivity {
         Node next = new Node();
         head.next = next;
         next.value = name;
+
+        PrintWriter writer = sink.getWriter();
         
-        sink.println(next.value);                  /* BAD */
-        sink.println(head.next.value);             /* BAD */
-        sink.println(head.value);                  /* OK */
+        writer.println(next.value);                  /* BAD */
+        writer.println(head.next.value);             /* BAD */
+        writer.println(head.value);                  /* OK */
     }
 
     public String getDescription() {

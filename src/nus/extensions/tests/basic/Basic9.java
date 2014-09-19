@@ -26,7 +26,8 @@ public class Basic9 extends MainActivity {
         String s5 = choice ? s3 : s2;
         String s6 = s5;
         
-        sink.println(s6);    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        writer.println(s6);    /* BAD */
     }
     
     public String getDescription() {

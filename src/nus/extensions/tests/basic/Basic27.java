@@ -25,8 +25,10 @@ public class Basic27 extends MainActivity {
        while(e.hasMoreElements()) {
            String name = (String) e.nextElement();
            if(name.equals(FIELD_NAME)) {
+
+               PrintWriter writer = sink.getWriter();
                String value = source.getParameter(name);
-               sink.println("value: " + value);           /* BAD */
+               writer.println("value: " + value);           /* BAD */
            }
        }
     }

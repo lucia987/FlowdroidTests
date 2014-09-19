@@ -30,17 +30,18 @@ public class Collections10 extends MainActivity {
         
         Iterator iter = c1.iterator();
 
+        PrintWriter writer = sink.getWriter();
         while(iter.hasNext()){
         	String str = (String) iter.next();
         	
-        	sink.println(str);                    /* BAD */
+        	writer.println(str);                    /* BAD */
         }
         
         iter = c2.iterator();
         while(iter.hasNext()){
         	String str = (String) iter.next();
         	
-        	sink.println(str);                    /* OK */
+        	writer.println(str);                    /* OK */
         }
     }
     

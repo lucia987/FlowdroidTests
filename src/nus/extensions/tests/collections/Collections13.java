@@ -30,9 +30,10 @@ public class Collections13 extends MainActivity {
         List c3 = java.util.Arrays.asList(new String[]{new String("xyz")});
         List c4 = java.util.Arrays.asList(new String[]{new String(s1)});
         
-      	sink.println(c2.get(0));                    /* BAD */
-      	sink.println(c3.get(0));                    /* OK */
-      	sink.println(c4.get(0));                    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        writer.println(c2.get(0));                    /* BAD */
+      	writer.println(c3.get(0));                    /* OK */
+      	writer.println(c4.get(0));                    /* BAD */
     }
     
     public String getDescription() {

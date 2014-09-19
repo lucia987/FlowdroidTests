@@ -5,6 +5,8 @@
  */
 package nus.extensions.tests.arrays;
 
+import java.io.PrintWriter;
+
 import nus.extensions.tests.*;
 
 public class Arrays1 extends MainActivity {
@@ -14,7 +16,9 @@ public class Arrays1 extends MainActivity {
         String[] array = new String[10];
         array[0] = s1;
         
-        sink.println(array[0]);         /* BAD */        
+        PrintWriter writer = sink.getWriter();
+        
+        writer.println(array[0]);         /* BAD */        
     }
     
     public String getDescription() {

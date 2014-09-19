@@ -20,12 +20,13 @@ public class Basic4 extends MainActivity {
         String str = source.getParameter("name");
         Random r = new Random();
         int choice = r.nextInt();
+        PrintWriter writer = sink.getWriter();
         
         switch (choice) {   
             case 1: break;
             case 2: break;
             case 3: 
-                sink.println(str);    /* BAD */
+                writer.println(str);    /* BAD */
                 break;
             default:
         }

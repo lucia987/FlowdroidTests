@@ -18,6 +18,8 @@ public class Basic28 extends MainActivity {
 	{
 		String name = source.getParameter("name");
         boolean b[] = new boolean[3];
+
+        PrintWriter writer = sink.getWriter();
         if (b[0]) {
             if (b[0]) {
                 if (b[0]) {
@@ -51,7 +53,7 @@ public class Basic28 extends MainActivity {
                             if (b[0]) {
                                 if (b[0]) {
                                 }
-                                sink.println(name);       /* BAD */
+                                writer.println(name);       /* BAD */
                             } else {
                             }
                         } else {
@@ -119,7 +121,7 @@ public class Basic28 extends MainActivity {
             if (b[0]) {
                 if (b[0]) {
                     if (b[0]) {
-                        sink.println(name);       /* BAD */
+                        writer.println(name);       /* BAD */
                     }
                 } else {
                 }

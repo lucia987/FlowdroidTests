@@ -23,7 +23,8 @@ public class Collections14 extends MainActivity {
         }
         c.addLast(s1);
         
-      	sink.println(c.getLast());                    /* BAD */
+        PrintWriter writer = sink.getWriter();
+        writer.println(c.getLast());                    /* BAD */
     }
     
     public String getDescription() {
