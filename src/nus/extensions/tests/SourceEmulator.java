@@ -1,5 +1,6 @@
 package nus.extensions.tests;
 
+import java.io.SequenceInputStream;
 import java.util.Enumeration;
 import java.util.Map;
 /*
@@ -73,6 +74,46 @@ public class SourceEmulator
 		return null;
 	}
 	public String getComment() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Enumeration getHeaders(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String getHeader(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Enumeration getHeaderNames() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public char[] getProtocol() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public char[] getScheme() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public char[] getAuthType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public char[] getQueryString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public char[] getRemoteUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public char[] getRequestURL() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public SequenceInputStream getInputStream() {
 		// TODO Auto-generated method stub
 		return null;
 	}
