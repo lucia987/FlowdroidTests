@@ -47,4 +47,8 @@ public class SinkEmulator
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public void println(String str) {
+		// TODO Auto-generated method stub
+		
+	}
 }

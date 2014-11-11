@@ -41,7 +41,14 @@ public class PolymorphicCall extends MainActivity {
        
        C c2 = new D();
        c2.setData(name);
+       /* what does FD report? which class and method? D.setData or C.setData? */
+       /* it reports: */
        
+//virtualinvoke $r4.<nus.extensions.tests.cornercases.PolymorphicCall$C: void setData(java.lang.String)>($r5), 
+//$r0.<nus.extensions.tests.cornercases.PolymorphicCall$D: java.lang.String str> = $r1, return, 
+//$r5 = virtualinvoke $r4.<nus.extensions.tests.cornercases.PolymorphicCall$C: java.lang.String getData()>(), 
+//$r1 = $r0.<nus.extensions.tests.cornercases.PolymorphicCall$D: java.lang.String str>, 
+ 
        String str1 = c1.getData();
        String str2 = c2.getData();
        
