@@ -124,7 +124,7 @@
               </intent-filter>
           </activity>
           <!-- doesn't work in our system, but works in FD, probably wrongly -->
-          <activity
+<!--           <activity
               android:name="nus.extensions.tests.datastructures.Datastructures6"
               android:label="@string/app_name"
               ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
@@ -136,7 +136,7 @@
 
                   <category android:name="android.intent.category.LAUNCHER" />
               </intent-filter>
-          </activity>
+          </activity> -->
           <activity
               android:name="nus.extensions.tests.cornercases.GeneralCase"
               android:label="@string/app_name"
@@ -150,7 +150,7 @@
                   <category android:name="android.intent.category.LAUNCHER" />
               </intent-filter>
           </activity>
-          <activity
+<!--           <activity
               android:name="nus.extensions.tests.cornercases.GeneralCase2"
               android:label="@string/app_name"
               ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
@@ -162,7 +162,7 @@
 
                   <category android:name="android.intent.category.LAUNCHER" />
               </intent-filter>
-          </activity>
+          </activity> -->
           <activity
               android:name="nusnus.extensions.tests.cornercases.MultipleEntryPoints"
               android:label="@string/app_name"

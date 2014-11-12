@@ -47,12 +47,23 @@ public class PropagateBeyondSink extends MainActivity {
 
 		String tainted_str = d1.getField();
 
+		// 1st sink - regular
 		PrintWriter writer = sink.getWriter();
 		writer.println(tainted_str); /* BAD */
 		
-		// some use stmt
-		String s = tainted_str.toString();
-		writer.println(s); /* BAD */
+		String s = new String(tainted_str);
+		// 2nd sink
+		writer.println(s);
+		
+		// 3rd sink that propagates taint
+		String returnedS = sink.executeAndReturn(s);
+
+		// 4th sink
+		sink.execute(returnedS); 
+		
+		String x = tainted_str.toString(); // does not appear in the log 
+		// 5th sink
+		writer.println(x);
 	}
 
 	public String getDescription() {

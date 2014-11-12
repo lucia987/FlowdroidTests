@@ -51,4 +51,8 @@ public class SinkEmulator
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public String executeAndReturn(String str){
+		return str;
+	}
 }
