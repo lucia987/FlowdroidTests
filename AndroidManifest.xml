@@ -1,38 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ignore="http://comp.nus.edu.sg"
     package="nus.extensions.tests"
     android:versionCode="1"
     android:versionName="1.0"
-
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ignore="http://comp.nus.edu.sg"
     mc:Ignorable="ignore" >
-	<!-- The above 3 lines help to comment out attributes in XML: -->
-	<!-- http://blog.galasoft.ch/posts/2010/02/quick-tip-commenting-out-properties-in-xaml/ -->
-	
+
+    <!-- The above 3 lines help to comment out attributes in XML: -->
+    <!-- http://blog.galasoft.ch/posts/2010/02/quick-tip-commenting-out-properties-in-xaml/ -->
+
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
+          <activity
+            android:name="nus.extensions.tests.cornercases.PolymorphicCall"
+            android:label="@string/app_name"
             ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
             ignore:namebasic="nus.extensions.tests.basic.Basic1"
-        	ignore:namecollections="nus.extensions.tests.collections.Collections1"
-        	ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1"
-        	
-            android:name="nus.extensions.tests.datastructures.Datastructures6"
-            android:label="@string/app_name" >
+            ignore:namecollections="nus.extensions.tests.collections.Collections1"
+            ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+                  <activity
+            android:name="nus.extensions.tests.cornercases.PropagateBeyondSink"
+            android:label="@string/app_name"
+            ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+            ignore:namebasic="nus.extensions.tests.basic.Basic1"
+            ignore:namecollections="nus.extensions.tests.collections.Collections1"
+            ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+          <activity
+              android:name="nus.extensions.tests.datastructures.Datastructures0"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.extensions.tests.datastructures.Datastructures2"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.extensions.tests.datastructures.Datastructures3"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.extensions.tests.datastructures.Datastructures4"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.extensions.tests.datastructures.Datastructures5"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.extensions.tests.datastructures.Datastructures5Aliases"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <!-- doesn't work in our system, but works in FD, probably wrongly -->
+<!--           <activity
+              android:name="nus.extensions.tests.datastructures.Datastructures6"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity> -->
+          <activity
+              android:name="nus.extensions.tests.cornercases.GeneralCase"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+<!--           <activity
+              android:name="nus.extensions.tests.cornercases.GeneralCase2"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity> -->
+          <activity
+              android:name="nusnus.extensions.tests.cornercases.MultipleEntryPoints"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.extensions.tests.cornercases.PropagateMethodReturn"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.exnus.extensions.tests.cornercases.PropagateToClassField"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.extensions.tests.cornercases.PropagateToConstructor"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+          <activity
+              android:name="nus.exnus.extensions.tests.cornercases.PropagateToParameterObject"
+              android:label="@string/app_name"
+              ignore:namearrays="nus.extensions.tests.arrays.Arrays1"
+              ignore:namebasic="nus.extensions.tests.basic.Basic1"
+              ignore:namecollections="nus.extensions.tests.collections.Collections1"
+              ignore:namedatastructures="nus.extensions.tests.datastructures.Datastructures1" >
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+          </activity>
+</application>
 
 </manifest>
